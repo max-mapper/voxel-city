@@ -78688,7 +78688,9 @@ if (parsedURL.query && parsedURL.query.lat && parsedURL.query.lon) {
 
 function showVoxelTerrain(lat, lon, zoom) {
   zoom = zoom || 18
-  var pngURL = 'http://a.tiles.mapbox.com/v3/dmt.sf_building/' + lon + ',' + lat + ',' + zoom + '/640x640.png'
+  var pngURL
+  if (parsedURL.query.url) pngURL = parsedURL.query.url
+  else pngURL = 'http://a.tiles.mapbox.com/v3/dmt.sf_building/' + lon + ',' + lat + ',' + zoom + '/640x640.png'
 
   heightmap(pngURL, chunkDistance * 2 * chunkSize , function(err, pngGenerate) {
     window.game = createGame({
