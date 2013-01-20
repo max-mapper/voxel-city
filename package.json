@@ -1,0 +1,14 @@
+{
+  "name": "voxel-city",
+  "version": "0.0.1",
+  "dependencies": {
+    "voxel-engine": "0.2.9",
+    "toolbar": "0.0.2"
+  },
+  "devDependencies": {
+    "browservefy": "0.0.0"
+  },
+  "scripts": {
+    "start": "echo \"open localhost:8080\" && ./node_modules/browservefy/bin/browservefy index.js 8080 -- -d"
+  }
+}
