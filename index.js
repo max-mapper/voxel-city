@@ -30,7 +30,8 @@ function showVoxelTerrain(lat, lon, zoom) {
   heightmap(pngURL, chunkDistance * 2 * chunkSize , function(err, pngGenerate) {
     window.game = createGame({
       generate: pngGenerate,
-      startingPosition: [0, 500, 0]
+      startingPosition: [0, 500, 0],
+      materials: ['grass', 'brick', 'dirt']
     })
     game.controls.pitchObject.rotation.x = -1.5;
     game.controls.yawObject.position.z += 500;
